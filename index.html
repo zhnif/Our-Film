@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#080604" />
+  <title>Our Little Cinema</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- FILM GRAIN OVERLAY -->
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <!-- VIGNETTE -->
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- LETTERBOX BARS -->
+  <div class="letterbox letterbox-top" aria-hidden="true"></div>
+  <div class="letterbox letterbox-bottom" aria-hidden="true"></div>
+
+  <!-- AUDIO CONTROL -->
+  <button class="audio-control" id="audioControl" aria-label="Toggle soundtrack" title="Toggle soundtrack">
+    <span class="audio-icon">
+      <span class="bar b1"></span>
+      <span class="bar b2"></span>
+      <span class="bar b3"></span>
+    </span>
+    <span class="audio-label">SOUNDTRACK</span>
+  </button>
+
+  <!-- SCENE PROGRESS INDICATOR -->
+  <div class="scene-indicator" id="sceneIndicator" aria-live="polite">
+    <span class="scene-current" id="sceneCurrentLabel">01</span>
+    <span class="scene-sep">/</span>
+    <span class="scene-total">06</span>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       OPENING SEQUENCE
+  ═══════════════════════════════════════════════ -->
+  <section id="opening" class="opening-sequence" role="region" aria-label="Opening">
+
+    <div class="opening-projector" aria-hidden="true"></div>
+
+    <div class="opening-content">
+      <div class="opening-title-block" id="openingTitleBlock">
+        <p class="opening-studio">A SPECIAL PRESENTATION</p>
+        <h1 class="opening-main-title">Our Little<br /><em>Cinema</em></h1>
+        <p class="opening-tagline">A film made for one person.</p>
+      </div>
+
+      <div class="opening-credits" id="openingCredits" aria-hidden="true">
+        <div class="credit-line">
+          <span class="credit-role">A FILM BY</span>
+          <span class="credit-name" id="creditDirector"></span>
+        </div>
+        <div class="credit-divider"></div>
+        <div class="credit-line">
+          <span class="credit-role">STARRING</span>
+          <span class="credit-name" id="creditStar"></span>
+        </div>
+      </div>
+
+      <button class="enter-cinema-btn" id="enterCinemaBtn" aria-label="Enter Cinema">
+        <span class="enter-icon">▶</span>
+        <span class="enter-text">ENTER CINEMA</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       MAIN FILM
+  ═══════════════════════════════════════════════ -->
+  <main id="mainFilm" class="main-film" aria-label="Main Film">
+
+    <!-- ─────────────────────────────────────────
+         SCENE 01 — THE BEGINNING
+    ───────────────────────────────────────── -->
+    <section id="scene01" class="scene" data-scene="01" data-scene-title="THE BEGINNING" role="region" aria-label="Scene 01: The Beginning">
+      <div class="scene-label-top">
+        <span class="scene-number">SCENE 01</span>
+        <span class="scene-sep-dot">·</span>
+        <span class="scene-name">THE BEGINNING</span>
+      </div>
+
+      <div class="scene01-hero">
+        <div class="cinematic-frame">
+          <img
+            src="assets/img/photo1.jpg"
+            alt="A photograph from the beginning"
+            class="cinematic-photo ken-burns"
+            id="heroPhoto"
+            onerror="this.onerror=null; this.parentNode.classList.add('img-missing')"
+          />
+          <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+          <div class="frame-vignette"></div>
+          <div class="frame-border"></div>
+        </div>
+      </div>
+
+      <div class="scene01-text">
+        <h2 class="scene-title-large reveal-text">The Beginning</h2>
+        <p class="scene-subtitle reveal-text">"Every story has a first scene."</p>
+        <div class="narrative-block">
+          <p class="narrative reveal-para">There's always a before and an after. A moment that doesn't announce itself—no music swells, no camera slowly pushes in. Just an ordinary day, ordinary light, and then you. And somehow, without knowing it, I stepped into a different version of my life.</p>
+          <p class="narrative reveal-para">I don't know exactly when it became clear to me. Maybe it was the way you laughed at something I said, not to be kind, but because you actually found it funny. Maybe it was the quiet—the kind of quiet that only exists between two people who don't need to fill every second. Maybe it was later. Maybe it had already happened before I noticed.</p>
+          <p class="narrative reveal-para">But I know this: there is a version of my days that existed before you were in them, and I don't particularly miss that version. Whatever it was that changed—I'm glad it did.</p>
+          <p class="narrative reveal-para">This is where our story starts. Or maybe this is just where I start telling it.</p>
+        </div>
+      </div>
+
+      <div class="scene-footer">
+        <span class="scene-counter">SCENE 01 / 06</span>
+        <a href="#scene02" class="continue-arrow" aria-label="Continue to next scene">CONTINUE ↓</a>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+         SCENE 02 — THE LITTLE THINGS
+    ───────────────────────────────────────── -->
+    <section id="scene02" class="scene scene-dark" data-scene="02" data-scene-title="THE LITTLE THINGS" role="region" aria-label="Scene 02: The Little Things">
+      <div class="scene-label-top">
+        <span class="scene-number">SCENE 02</span>
+        <span class="scene-sep-dot">·</span>
+        <span class="scene-name">THE LITTLE THINGS</span>
+      </div>
+
+      <div class="scene02-intro">
+        <h2 class="scene-title-large reveal-text">The Little<br /><em>Things</em></h2>
+        <p class="scene-subtitle reveal-text">"Not everything needs to be remembered. Some things just need to be felt."</p>
+      </div>
+
+      <div class="filmstrip-gallery" id="filmstripGallery">
+        <div class="filmstrip-item filmstrip-large" data-frame="001" data-caption="The way time moves differently when you're there.">
+          <div class="filmstrip-inner">
+            <img src="assets/img/photo2.jpg" alt="Memory 001" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+          </div>
+          <div class="filmstrip-meta">
+            <span class="frame-label">FRAME 001</span>
+          </div>
+        </div>
+        <div class="filmstrip-item filmstrip-portrait" data-frame="002" data-caption="The quiet that doesn't feel like silence.">
+          <div class="filmstrip-inner">
+            <img src="assets/img/photo3.jpg" alt="Memory 002" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+          </div>
+          <div class="filmstrip-meta">
+            <span class="frame-label">FRAME 002</span>
+          </div>
+        </div>
+        <div class="filmstrip-item filmstrip-wide" data-frame="003" data-caption="An ordinary moment I keep returning to.">
+          <div class="filmstrip-inner">
+            <img src="assets/img/photo4.jpg" alt="Memory 003" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+          </div>
+          <div class="filmstrip-meta">
+            <span class="frame-label">FRAME 003</span>
+          </div>
+        </div>
+        <div class="filmstrip-item filmstrip-square" data-frame="004" data-caption="Something small that meant everything.">
+          <div class="filmstrip-inner">
+            <img src="assets/img/photo5.jpg" alt="Memory 004" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+          </div>
+          <div class="filmstrip-meta">
+            <span class="frame-label">FRAME 004</span>
+          </div>
+        </div>
+        <div class="filmstrip-item filmstrip-portrait" data-frame="005" data-caption="The light looked different that day.">
+          <div class="filmstrip-inner">
+            <img src="assets/img/photo6.jpg" alt="Memory 005" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+          </div>
+          <div class="filmstrip-meta">
+            <span class="frame-label">FRAME 005</span>
+          </div>
+        </div>
+        <div class="filmstrip-item filmstrip-large" data-frame="006" data-caption="I didn't take a photo. I just looked.">
+          <div class="filmstrip-inner">
+            <img src="assets/img/photo7.jpg" alt="Memory 006" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+          </div>
+          <div class="filmstrip-meta">
+            <span class="frame-label">FRAME 006</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scene-footer">
+        <span class="scene-counter">SCENE 02 / 06</span>
+        <a href="#scene03" class="continue-arrow">CONTINUE ↓</a>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Frame viewer" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close frame">✕</button>
+      <div class="lightbox-inner">
+        <div class="lightbox-frame-label" id="lightboxFrameLabel">FRAME 001</div>
+        <div class="lightbox-img-wrap">
+          <img src="" alt="" id="lightboxImg" class="lightbox-img" />
+          <div class="lightbox-img-missing" id="lightboxMissing">FRAME NOT FOUND</div>
+        </div>
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+        <div class="lightbox-nav">
+          <button class="lightbox-nav-btn" id="lightboxPrev" aria-label="Previous frame">← PREV FRAME</button>
+          <button class="lightbox-nav-btn" id="lightboxNext" aria-label="Next frame">NEXT FRAME →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────────
+         SCENE 03 — THE MOMENTS I KEEP
+    ───────────────────────────────────────── -->
+    <section id="scene03" class="scene" data-scene="03" data-scene-title="THE MOMENTS I KEEP" role="region" aria-label="Scene 03: The Moments I Keep">
+      <div class="scene-label-top">
+        <span class="scene-number">SCENE 03</span>
+        <span class="scene-sep-dot">·</span>
+        <span class="scene-name">THE MOMENTS I KEEP</span>
+      </div>
+
+      <h2 class="scene-title-large reveal-text">The Moments<br /><em>I Keep</em></h2>
+      <p class="scene-subtitle reveal-text">"Memory is not what happened. It's what stayed."</p>
+
+      <!-- Memory A -->
+      <article class="memory-block memory-a reveal-block">
+        <div class="memory-label">SCENE 03A</div>
+        <div class="memory-layout">
+          <div class="memory-photo-wrap">
+            <div class="cinematic-frame memory-frame">
+              <img src="assets/img/photo8.jpg" alt="Memory A" loading="lazy" onerror="this.onerror=null; this.parentNode.classList.add('img-missing')" />
+              <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+            </div>
+          </div>
+          <div class="memory-text">
+            <h3 class="memory-title">The Day I Remember Most</h3>
+            <p class="narrative">There are days that feel like years. And then there are the ones that last forever somehow—not because anything remarkable happened, but because something about the light, or the way you were there, pressed itself into me like a photograph developing slowly in a dark room.</p>
+            <p class="narrative">I keep that day somewhere that doesn't have a name. I return to it sometimes when the world is too loud or the night is too long. I don't think I've ever told you that. I probably should have.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Memory B -->
+      <article class="memory-block memory-b reveal-block">
+        <div class="memory-label">SCENE 03B</div>
+        <div class="memory-layout memory-layout-reverse">
+          <div class="memory-photo-wrap">
+            <div class="cinematic-frame memory-frame">
+              <img src="assets/img/photo9.jpg" alt="Memory B" loading="lazy" onerror="this.onerror=null; this.parentNode.classList.add('img-missing')" />
+              <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+            </div>
+          </div>
+          <div class="memory-text">
+            <h3 class="memory-title">The One I Almost Missed</h3>
+            <p class="narrative">I almost didn't pay attention. I was somewhere else in my head—the way I sometimes am—when I looked up and there you were. Just being you. Not doing anything in particular. Just existing in a way that somehow made everything else stop mattering.</p>
+            <p class="narrative">I don't know what I would have missed if I'd looked away. I'm glad I didn't. I'm glad for every small second I chose to actually be there with you instead of wherever else my mind was trying to go.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Memory C -->
+      <article class="memory-block memory-c reveal-block">
+        <div class="memory-label">SCENE 03C</div>
+        <div class="memory-layout">
+          <div class="memory-photo-wrap">
+            <div class="cinematic-frame memory-frame">
+              <img src="assets/img/photo10.jpg" alt="Memory C" loading="lazy" onerror="this.onerror=null; this.parentNode.classList.add('img-missing')" />
+              <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+            </div>
+          </div>
+          <div class="memory-text">
+            <h3 class="memory-title">The Late Night That Became Morning</h3>
+            <p class="narrative">Some conversations have no ending. They just slowly dissolve into silence, and then into sleep, and then into a kind of closeness that doesn't need words anymore. That's what I think of when I think of us at our best: the way time becomes elastic, unhurried, generous.</p>
+            <p class="narrative">I've had long nights before. But not like those. Not with the feeling that the night itself was on our side, giving us more minutes than it gives anyone else.</p>
+          </div>
+        </div>
+      </article>
+
+      <div class="scene-footer">
+        <span class="scene-counter">SCENE 03 / 06</span>
+        <a href="#scene04" class="continue-arrow">CONTINUE ↓</a>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+         SCENE 04 — WHEN THE WORLD FEELS HEAVY
+    ───────────────────────────────────────── -->
+    <section id="scene04" class="scene scene-dark scene04-bg" data-scene="04" data-scene-title="WHEN THE WORLD FEELS HEAVY" role="region" aria-label="Scene 04: When the World Feels Heavy">
+      <div class="scene-label-top">
+        <span class="scene-number">SCENE 04</span>
+        <span class="scene-sep-dot">·</span>
+        <span class="scene-name">WHEN THE WORLD FEELS HEAVY</span>
+      </div>
+
+      <div class="scene04-intro reveal-block">
+        <h2 class="scene-title-large">When The World<br /><em>Feels Heavy</em></h2>
+        <p class="scene-subtitle">"If today is one of those days, choose a scene."</p>
+      </div>
+
+      <!-- Mood Selector -->
+      <div class="mood-selector" id="moodSelector" role="group" aria-label="Choose your mood">
+        <button class="mood-btn" data-mood="tired" aria-pressed="false">I'M TIRED</button>
+        <button class="mood-btn" data-mood="sad" aria-pressed="false">I'M SAD</button>
+        <button class="mood-btn" data-mood="overthinking" aria-pressed="false">I'M OVERTHINKING</button>
+        <button class="mood-btn" data-mood="courage" aria-pressed="false">I NEED COURAGE</button>
+        <button class="mood-btn" data-mood="missing" aria-pressed="false">I MISS YOU</button>
+        <button class="mood-btn" data-mood="general" aria-pressed="false">JUST WANT TO READ</button>
+        <button class="mood-btn mood-btn-surprise" data-mood="surprise" aria-pressed="false">✦ SURPRISE ME</button>
+      </div>
+
+      <!-- Message Display -->
+      <div class="message-display" id="messageDisplay" aria-live="polite" aria-hidden="true">
+        <div class="message-now-playing">
+          <span class="dot-anim"></span>
+          SCENE PLAYING...
+        </div>
+        <div class="message-text-wrap" id="messageTextWrap">
+          <p class="message-body" id="messageBody"></p>
+        </div>
+        <button class="message-next-btn" id="messageNextBtn">NEXT MESSAGE</button>
+      </div>
+
+      <div class="scene-footer">
+        <span class="scene-counter">SCENE 04 / 06</span>
+        <a href="#scene05" class="continue-arrow">CONTINUE ↓</a>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+         SCENE 05 — THINGS I NEVER SAY ENOUGH
+    ───────────────────────────────────────── -->
+    <section id="scene05" class="scene scene-typography" data-scene="05" data-scene-title="THINGS I NEVER SAY ENOUGH" role="region" aria-label="Scene 05: Things I Never Say Enough">
+      <div class="scene-label-top">
+        <span class="scene-number">SCENE 05</span>
+        <span class="scene-sep-dot">·</span>
+        <span class="scene-name">THINGS I NEVER SAY ENOUGH</span>
+      </div>
+
+      <!-- Sequential Typography Reveal -->
+      <div class="typo-sequence" id="typoSequence" aria-live="polite">
+        <div class="typo-word" data-index="0" aria-hidden="true">"THANK YOU."</div>
+        <div class="typo-word" data-index="1" aria-hidden="true">"FOR STAYING."</div>
+        <div class="typo-word" data-index="2" aria-hidden="true">"FOR CHOOSING THIS."</div>
+        <div class="typo-word" data-index="3" aria-hidden="true">"FOR EXISTING."</div>
+        <div class="typo-word" data-index="4" aria-hidden="true">"FOR BEING YOU."</div>
+      </div>
+
+      <!-- Personal Letter -->
+      <div class="scene05-letter reveal-block" id="scene05Letter">
+        <div class="letter-decoration" aria-hidden="true">— a letter —</div>
+        <div class="letter-body">
+          <p class="narrative">I don't say this as often as I should, and I think you probably know that, but I want to say it here, in writing, so it exists somewhere outside of me:</p>
+          <p class="narrative">You are genuinely good. Not in the polished, effortful way that some people perform goodness. In the real way. The way that shows up without being asked, that notices the small things, that doesn't make a scene about kindness.</p>
+          <p class="narrative">You have made me better. Not by telling me to be better—but just by being someone I wanted to show up for. That's the kind of influence that changes people quietly, at the root level, without announcement.</p>
+          <p class="narrative">I notice more than I say. I appreciate more than I express. And I know that's something I should work on. But I want you to know—even when I'm quiet, even when I get absorbed in whatever is happening in my own head—I see you. I feel it. I'm grateful for it.</p>
+          <p class="narrative">Thank you for being patient with me. For being curious about me. For all the times you stayed when it would have been easier to go.</p>
+          <p class="narrative">I'm glad you stayed.</p>
+        </div>
+      </div>
+
+      <div class="scene-footer">
+        <span class="scene-counter">SCENE 05 / 06</span>
+        <a href="#scene06" class="continue-arrow">CONTINUE ↓</a>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+         SCENE 06 — YOUR BIRTHDAY
+    ───────────────────────────────────────── -->
+    <section id="scene06" class="scene scene-birthday" data-scene="06" data-scene-title="YOUR BIRTHDAY" role="region" aria-label="Scene 06: Your Birthday">
+      <div class="scene-label-top">
+        <span class="scene-number">SCENE 06</span>
+        <span class="scene-sep-dot">·</span>
+        <span class="scene-name">YOUR BIRTHDAY</span>
+      </div>
+
+      <div class="birthday-climax">
+        <div class="birthday-date-label reveal-text" id="birthdayLabel"></div>
+        <h2 class="birthday-title reveal-text">Happy Birthday,<br /><em id="birthdayName"></em></h2>
+
+        <div class="birthday-photo-wrap reveal-block">
+          <div class="cinematic-frame birthday-frame">
+            <img src="assets/img/photo11.jpg" alt="Birthday portrait" loading="lazy" onerror="this.onerror=null; this.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+            <div class="birthday-glow" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="birthday-letter reveal-block">
+          <p class="narrative narrative-lead">Today is yours. Entirely, completely, undeniably yours.</p>
+          <p class="narrative">I've been thinking about what I want to say to you today, and I keep running into the same wall: the things that matter most are the hardest to put into language. Not because they're complicated—but because they're so large and so quiet at the same time, like something you can only ever point toward and hope the other person sees what you're pointing at.</p>
+          <p class="narrative">So here's what I'll say: I am lucky. Not in the abstract, sentimental way people say that. In the specific, daily, ordinary way. Lucky that you exist. Lucky that our lives managed to intersect at whatever strange angle they did. Lucky that I get to know you—the real version of you, not the public-facing one.</p>
+          <p class="narrative">I hope today is soft. I hope it gives you what you need, whether that's a celebration or a quiet room or something in between. I hope the year ahead holds something you didn't expect—something good, surprising, yours.</p>
+          <p class="narrative">You deserve so much of the world. I know I say that, and I know everyone says that to people they love, but I mean it with the kind of specificity that doesn't translate well into sentences. You deserve to be known. You deserve to take up space. You deserve to be chosen, again and again, every ordinary day.</p>
+          <p class="narrative">I choose you. On your birthday and every other day. With all the imperfect, genuine care I have.</p>
+          <p class="narrative narrative-sign">— with everything,<br /><em id="birthdayFromName"></em></p>
+        </div>
+      </div>
+
+      <div class="scene-footer">
+        <span class="scene-counter">SCENE 06 / 06</span>
+        <a href="#finalScene" class="continue-arrow">CONTINUE ↓</a>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+         FINAL SCENE
+    ───────────────────────────────────────── -->
+    <section id="finalScene" class="scene scene-final" data-scene="final" role="region" aria-label="Final Scene">
+      <div class="scene-label-top">
+        <span class="scene-number">FINAL SCENE</span>
+      </div>
+
+      <div class="final-sequence" id="finalSequence">
+        <p class="final-line" data-delay="0">"Every movie eventually ends."</p>
+        <p class="final-line" data-delay="2500">"But I don't think this is the end."</p>
+        <p class="final-line" data-delay="5000">"Just another scene."</p>
+        <h2 class="final-to-be" data-delay="7500">TO BE CONTINUED...</h2>
+      </div>
+
+      <!-- FILM CREDITS -->
+      <div class="credits-wrap" id="creditsWrap" aria-hidden="true">
+        <div class="credits-scroll" id="creditsScroll">
+          <div class="credits-block">
+            <p class="credits-role">A FILM BY</p>
+            <p class="credits-name" id="creditsDirectorFinal"></p>
+          </div>
+          <div class="credits-rule"></div>
+          <div class="credits-block">
+            <p class="credits-role">FOR</p>
+            <p class="credits-name" id="creditsStarFinal"></p>
+          </div>
+          <div class="credits-rule"></div>
+          <div class="credits-block">
+            <p class="credits-role">SPECIAL THANKS</p>
+            <p class="credits-name">To every memory we made</p>
+          </div>
+          <div class="credits-block">
+            <p class="credits-role">CAMERA</p>
+            <p class="credits-name">Every moment I wish I could keep</p>
+          </div>
+          <div class="credits-block">
+            <p class="credits-role">STORY</p>
+            <p class="credits-name">Us</p>
+          </div>
+          <div class="credits-rule"></div>
+          <div class="credits-the-end">
+            <p class="credits-end-title">THE END</p>
+            <p class="credits-end-sub">for now.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="final-actions" id="finalActions">
+        <button class="replay-btn" id="replayBtn" aria-label="Watch again from the beginning">
+          ↻ WATCH AGAIN
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Audio element -->
+  <audio id="bgMusic" loop preload="none">
+    <source src="assets/audio/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
