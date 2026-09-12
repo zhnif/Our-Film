@@ -898,6 +898,7 @@ body.letterbox-active .letterbox-bottom {
 
 .typo-sequence {
   margin: 2rem 0 5rem;
+  height: 12rem;
   min-height: 12rem;
   display: flex;
   flex-direction: column;
@@ -1021,15 +1022,17 @@ body.letterbox-active .letterbox-bottom {
 }
 
 .final-sequence {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
+  display: grid;
+  place-items: center;
   margin-bottom: 6rem;
   min-height: 16rem;
-  justify-content: center;
-  position: relative;
   width: 100%;
+  position: relative;
+}
+
+/* All children are stacked in the same grid cell */
+.final-sequence > * {
+  grid-area: 1 / 1;
 }
 
 .final-line {
@@ -1038,11 +1041,12 @@ body.letterbox-active .letterbox-bottom {
   font-size: clamp(1.1rem, 3vw, 1.4rem);
   color: var(--c-ivory-dim);
   opacity: 0;
-  transition: opacity 1.4s var(--ease-film);
-  position: absolute;
+  transition: opacity 1.2s var(--ease-film);
   width: 100%;
+  text-align: center;
 }
 .final-line.visible { opacity: 1; }
+
 .final-to-be {
   font-family: var(--ff-display);
   font-size: clamp(1.6rem, 5vw, 2.8rem);
@@ -1051,8 +1055,8 @@ body.letterbox-active .letterbox-bottom {
   color: var(--c-ivory);
   opacity: 0;
   transition: opacity 1.6s var(--ease-film);
-  position: absolute;
   width: 100%;
+  text-align: center;
 }
 .final-to-be.visible { opacity: 1; }
 
@@ -1062,9 +1066,8 @@ body.letterbox-active .letterbox-bottom {
   max-width: 400px;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 1s var(--ease-slow);
   opacity: 0;
-  transition: max-height 1s var(--ease-slow), opacity 0.8s;
+  transition: max-height 1s var(--ease-slow), opacity 0.8s var(--ease-slow);
 }
 .credits-wrap.visible {
   max-height: 600px;
