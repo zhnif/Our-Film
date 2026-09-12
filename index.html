@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -12,18 +12,18 @@
 </head>
 <body>
 
-  <!-- FILM GRAIN OVERLAY -->
+  <!-- LAPISAN GRAIN FILM -->
   <div class="film-grain" aria-hidden="true"></div>
 
   <!-- VIGNETTE -->
   <div class="vignette" aria-hidden="true"></div>
 
-  <!-- LETTERBOX BARS -->
+  <!-- BATAS LETTERBOX -->
   <div class="letterbox letterbox-top" aria-hidden="true"></div>
   <div class="letterbox letterbox-bottom" aria-hidden="true"></div>
 
-  <!-- AUDIO CONTROL -->
-  <button class="audio-control" id="audioControl" aria-label="Toggle soundtrack" title="Toggle soundtrack">
+  <!-- KONTROL AUDIO -->
+  <button class="audio-control" id="audioControl" aria-label="Nyalakan atau matikan soundtrack" title="Nyalakan atau matikan soundtrack">
     <span class="audio-icon">
       <span class="bar b1"></span>
       <span class="bar b2"></span>
@@ -32,7 +32,7 @@
     <span class="audio-label">SOUNDTRACK</span>
   </button>
 
-  <!-- SCENE PROGRESS INDICATOR -->
+  <!-- INDIKATOR PROGRES ADEGAN -->
   <div class="scene-indicator" id="sceneIndicator" aria-live="polite">
     <span class="scene-current" id="sceneCurrentLabel">01</span>
     <span class="scene-sep">/</span>
@@ -40,150 +40,155 @@
   </div>
 
   <!-- ═══════════════════════════════════════════════
-       OPENING SEQUENCE
+       SEKUENS PEMBUKAAN
   ═══════════════════════════════════════════════ -->
-  <section id="opening" class="opening-sequence" role="region" aria-label="Opening">
+  <section id="opening" class="opening-sequence" role="region" aria-label="Pembukaan">
 
     <div class="opening-projector" aria-hidden="true"></div>
 
     <div class="opening-content">
       <div class="opening-title-block" id="openingTitleBlock">
-        <p class="opening-studio">A SPECIAL PRESENTATION</p>
+        <p class="opening-studio">SEBUAH PERSEMBAHAN KHUSUS</p>
         <h1 class="opening-main-title">Our Little<br /><em>Cinema</em></h1>
-        <p class="opening-tagline">A film made for one person.</p>
+        <p class="opening-tagline">Sebuah film yang dibuat untuk satu orang.</p>
       </div>
 
       <div class="opening-credits" id="openingCredits" aria-hidden="true">
         <div class="credit-line">
-          <span class="credit-role">A FILM BY</span>
+          <span class="credit-role">SEBUAH FILM OLEH</span>
           <span class="credit-name" id="creditDirector"></span>
         </div>
         <div class="credit-divider"></div>
         <div class="credit-line">
-          <span class="credit-role">STARRING</span>
+          <span class="credit-role">DIBINTANGI</span>
           <span class="credit-name" id="creditStar"></span>
         </div>
       </div>
 
-      <button class="enter-cinema-btn" id="enterCinemaBtn" aria-label="Enter Cinema">
+      <button class="enter-cinema-btn" id="enterCinemaBtn" aria-label="Masuk ke Bioskop">
         <span class="enter-icon">▶</span>
-        <span class="enter-text">ENTER CINEMA</span>
+        <span class="enter-text">MASUK KE BIOSKOP</span>
       </button>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════
-       MAIN FILM
+       FILM UTAMA
   ═══════════════════════════════════════════════ -->
-  <main id="mainFilm" class="main-film" aria-label="Main Film">
+  <main id="mainFilm" class="main-film" aria-label="Film Utama">
 
     <!-- ─────────────────────────────────────────
-         SCENE 01 — THE BEGINNING
+         ADEGAN 01 — AWAL MULA
     ───────────────────────────────────────── -->
-    <section id="scene01" class="scene" data-scene="01" data-scene-title="THE BEGINNING" role="region" aria-label="Scene 01: The Beginning">
+    <section id="scene01" class="scene" data-scene="01" data-scene-title="AWAL MULA" role="region" aria-label="Adegan 01: Awal Mula">
       <div class="scene-label-top">
-        <span class="scene-number">SCENE 01</span>
+        <span class="scene-number">ADEGAN 01</span>
         <span class="scene-sep-dot">·</span>
-        <span class="scene-name">THE BEGINNING</span>
+        <span class="scene-name">AWAL MULA</span>
       </div>
 
       <div class="scene01-hero">
         <div class="cinematic-frame">
           <img
             src="assets/img/photo1.jpg"
-            alt="A photograph from the beginning"
+            alt="Sebuah foto dari awal cerita"
             class="cinematic-photo ken-burns"
             id="heroPhoto"
             onerror="this.onerror=null; this.parentNode.classList.add('img-missing')"
           />
-          <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+          <div class="frame-missing-text" aria-hidden="true">FRAME TIDAK DITEMUKAN</div>
           <div class="frame-vignette"></div>
           <div class="frame-border"></div>
         </div>
       </div>
 
       <div class="scene01-text">
-        <h2 class="scene-title-large reveal-text">The Beginning</h2>
-        <p class="scene-subtitle reveal-text">"Every story has a first scene."</p>
+        <h2 class="scene-title-large reveal-text">Awal Mula</h2>
+        <p class="scene-subtitle reveal-text">"Setiap cerita memiliki adegan pertamanya."</p>
         <div class="narrative-block">
-          <p class="narrative reveal-para">There's always a before and an after. A moment that doesn't announce itself—no music swells, no camera slowly pushes in. Just an ordinary day, ordinary light, and then you. And somehow, without knowing it, I stepped into a different version of my life.</p>
-          <p class="narrative reveal-para">I don't know exactly when it became clear to me. Maybe it was the way you laughed at something I said, not to be kind, but because you actually found it funny. Maybe it was the quiet—the kind of quiet that only exists between two people who don't need to fill every second. Maybe it was later. Maybe it had already happened before I noticed.</p>
-          <p class="narrative reveal-para">But I know this: there is a version of my days that existed before you were in them, and I don't particularly miss that version. Whatever it was that changed—I'm glad it did.</p>
-          <p class="narrative reveal-para">This is where our story starts. Or maybe this is just where I start telling it.</p>
+          <p class="narrative reveal-para">Selalu ada sebelum dan sesudah. Sebuah momen yang tidak mengumumkan dirinya sendiri—tidak ada musik yang mengalun, tidak ada kamera yang perlahan mendekat. Hanya sebuah hari biasa, cahaya yang biasa, lalu kamu. Dan entah bagaimana, tanpa menyadarinya, aku melangkah ke versi lain dari hidupku.</p>
+          <p class="narrative reveal-para">Aku tidak tahu persis kapan semuanya menjadi jelas bagiku. Mungkin dari caramu tertawa pada sesuatu yang kukatakan, bukan karena ingin bersikap baik, tetapi karena kamu benar-benar menganggapnya lucu. Mungkin dari keheningan—jenis keheningan yang hanya ada di antara dua orang yang tidak perlu mengisi setiap detik. Mungkin setelahnya. Mungkin semuanya sudah terjadi sebelum aku menyadarinya.</p>
+          <p class="narrative reveal-para">Tapi aku tahu satu hal: ada versi dari hari-hariku yang pernah ada sebelum kamu di dalamnya, dan aku tidak terlalu merindukan versi itu. Apa pun yang berubah—aku bersyukur itu terjadi.</p>
+          <p class="narrative reveal-para">Di sinilah cerita kita dimulai. Atau mungkin, di sinilah aku mulai menceritakannya.</p>
         </div>
       </div>
 
       <div class="scene-footer">
-        <span class="scene-counter">SCENE 01 / 06</span>
-        <a href="#scene02" class="continue-arrow" aria-label="Continue to next scene">CONTINUE ↓</a>
+        <span class="scene-counter">ADEGAN 01 / 06</span>
+        <a href="#scene02" class="continue-arrow" aria-label="Lanjut ke adegan berikutnya">LANJUT ↓</a>
       </div>
     </section>
 
     <!-- ─────────────────────────────────────────
-         SCENE 02 — THE LITTLE THINGS
+         ADEGAN 02 — HAL-HAL KECIL
     ───────────────────────────────────────── -->
-    <section id="scene02" class="scene scene-dark" data-scene="02" data-scene-title="THE LITTLE THINGS" role="region" aria-label="Scene 02: The Little Things">
+    <section id="scene02" class="scene scene-dark" data-scene="02" data-scene-title="HAL-HAL KECIL" role="region" aria-label="Adegan 02: Hal-Hal Kecil">
       <div class="scene-label-top">
-        <span class="scene-number">SCENE 02</span>
+        <span class="scene-number">ADEGAN 02</span>
         <span class="scene-sep-dot">·</span>
-        <span class="scene-name">THE LITTLE THINGS</span>
+        <span class="scene-name">HAL-HAL KECIL</span>
       </div>
 
       <div class="scene02-intro">
-        <h2 class="scene-title-large reveal-text">The Little<br /><em>Things</em></h2>
-        <p class="scene-subtitle reveal-text">"Not everything needs to be remembered. Some things just need to be felt."</p>
+        <h2 class="scene-title-large reveal-text">Hal-Hal<br /><em>Kecil</em></h2>
+        <p class="scene-subtitle reveal-text">"Tidak semuanya perlu diingat. Beberapa hal hanya perlu dirasakan."</p>
       </div>
 
       <div class="filmstrip-gallery" id="filmstripGallery">
-        <div class="filmstrip-item filmstrip-large" data-frame="001" data-caption="The way time moves differently when you're there.">
+        <div class="filmstrip-item filmstrip-large" data-frame="001" data-caption="Cara waktu berjalan berbeda ketika kamu ada di sana.">
           <div class="filmstrip-inner">
-            <img src="assets/img/photo2.jpg" alt="Memory 001" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
-            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+            <img src="assets/img/photo2.jpg" alt="Kenangan 001" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME TIDAK DITEMUKAN</div>
           </div>
           <div class="filmstrip-meta">
             <span class="frame-label">FRAME 001</span>
           </div>
         </div>
-        <div class="filmstrip-item filmstrip-portrait" data-frame="002" data-caption="The quiet that doesn't feel like silence.">
+
+        <div class="filmstrip-item filmstrip-portrait" data-frame="002" data-caption="Keheningan yang tidak terasa seperti kesunyian.">
           <div class="filmstrip-inner">
-            <img src="assets/img/photo3.jpg" alt="Memory 002" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
-            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+            <img src="assets/img/photo3.jpg" alt="Kenangan 002" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME TIDAK DITEMUKAN</div>
           </div>
           <div class="filmstrip-meta">
             <span class="frame-label">FRAME 002</span>
           </div>
         </div>
-        <div class="filmstrip-item filmstrip-wide" data-frame="003" data-caption="An ordinary moment I keep returning to.">
+
+        <div class="filmstrip-item filmstrip-wide" data-frame="003" data-caption="Sebuah momen biasa yang terus ingin aku datangi kembali.">
           <div class="filmstrip-inner">
-            <img src="assets/img/photo4.jpg" alt="Memory 003" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
-            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+            <img src="assets/img/photo4.jpg" alt="Kenangan 003" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME TIDAK DITEMUKAN</div>
           </div>
           <div class="filmstrip-meta">
             <span class="frame-label">FRAME 003</span>
           </div>
         </div>
-        <div class="filmstrip-item filmstrip-square" data-frame="004" data-caption="Something small that meant everything.">
+
+        <div class="filmstrip-item filmstrip-square" data-frame="004" data-caption="Sesuatu yang kecil tetapi berarti segalanya.">
           <div class="filmstrip-inner">
-            <img src="assets/img/photo5.jpg" alt="Memory 004" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
-            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+            <img src="assets/img/photo5.jpg" alt="Kenangan 004" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME TIDAK DITEMUKAN</div>
           </div>
           <div class="filmstrip-meta">
             <span class="frame-label">FRAME 004</span>
           </div>
         </div>
-        <div class="filmstrip-item filmstrip-portrait" data-frame="005" data-caption="The light looked different that day.">
+
+        <div class="filmstrip-item filmstrip-portrait" data-frame="005" data-caption="Cahaya terlihat berbeda hari itu.">
           <div class="filmstrip-inner">
-            <img src="assets/img/photo6.jpg" alt="Memory 005" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
-            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+            <img src="assets/img/photo6.jpg" alt="Kenangan 005" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME TIDAK DITEMUKAN</div>
           </div>
           <div class="filmstrip-meta">
             <span class="frame-label">FRAME 005</span>
           </div>
         </div>
-        <div class="filmstrip-item filmstrip-large" data-frame="006" data-caption="I didn't take a photo. I just looked.">
+
+        <div class="filmstrip-item filmstrip-large" data-frame="006" data-caption="Aku tidak mengambil foto. Aku hanya memandanginya.">
           <div class="filmstrip-inner">
-            <img src="assets/img/photo7.jpg" alt="Memory 006" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
-            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+            <img src="assets/img/photo7.jpg" alt="Kenangan 006" loading="lazy" onerror="this.onerror=null; this.parentNode.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME TIDAK DITEMUKAN</div>
           </div>
           <div class="filmstrip-meta">
             <span class="frame-label">FRAME 006</span>
@@ -192,280 +197,288 @@
       </div>
 
       <div class="scene-footer">
-        <span class="scene-counter">SCENE 02 / 06</span>
-        <a href="#scene03" class="continue-arrow">CONTINUE ↓</a>
+        <span class="scene-counter">ADEGAN 02 / 06</span>
+        <a href="#scene03" class="continue-arrow">LANJUT ↓</a>
       </div>
     </section>
 
     <!-- LIGHTBOX -->
-    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Frame viewer" aria-hidden="true">
-      <button class="lightbox-close" id="lightboxClose" aria-label="Close frame">✕</button>
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Penampil frame" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Tutup frame">✕</button>
       <div class="lightbox-inner">
         <div class="lightbox-frame-label" id="lightboxFrameLabel">FRAME 001</div>
         <div class="lightbox-img-wrap">
           <img src="" alt="" id="lightboxImg" class="lightbox-img" />
-          <div class="lightbox-img-missing" id="lightboxMissing">FRAME NOT FOUND</div>
+          <div class="lightbox-img-missing" id="lightboxMissing">FRAME TIDAK DITEMUKAN</div>
         </div>
         <p class="lightbox-caption" id="lightboxCaption"></p>
         <div class="lightbox-nav">
-          <button class="lightbox-nav-btn" id="lightboxPrev" aria-label="Previous frame">← PREV FRAME</button>
-          <button class="lightbox-nav-btn" id="lightboxNext" aria-label="Next frame">NEXT FRAME →</button>
+          <button class="lightbox-nav-btn" id="lightboxPrev" aria-label="Frame sebelumnya">← FRAME SEBELUMNYA</button>
+          <button class="lightbox-nav-btn" id="lightboxNext" aria-label="Frame berikutnya">FRAME BERIKUTNYA →</button>
         </div>
       </div>
     </div>
 
     <!-- ─────────────────────────────────────────
-         SCENE 03 — THE MOMENTS I KEEP
+         ADEGAN 03 — MOMEN YANG KUSIMPAN
     ───────────────────────────────────────── -->
-    <section id="scene03" class="scene" data-scene="03" data-scene-title="THE MOMENTS I KEEP" role="region" aria-label="Scene 03: The Moments I Keep">
+    <section id="scene03" class="scene" data-scene="03" data-scene-title="MOMEN YANG KUSIMPAN" role="region" aria-label="Adegan 03: Momen yang Kusimpan">
       <div class="scene-label-top">
-        <span class="scene-number">SCENE 03</span>
+        <span class="scene-number">ADEGAN 03</span>
         <span class="scene-sep-dot">·</span>
-        <span class="scene-name">THE MOMENTS I KEEP</span>
+        <span class="scene-name">MOMEN YANG KUSIMPAN</span>
       </div>
 
-      <h2 class="scene-title-large reveal-text">The Moments<br /><em>I Keep</em></h2>
-      <p class="scene-subtitle reveal-text">"Memory is not what happened. It's what stayed."</p>
+      <h2 class="scene-title-large reveal-text">Momen<br /><em>Yang Kusimpan</em></h2>
+      <p class="scene-subtitle reveal-text">"Kenangan bukan tentang apa yang terjadi. Tetapi tentang apa yang tetap tinggal."</p>
 
-      <!-- Memory A -->
+      <!-- Kenangan A -->
       <article class="memory-block memory-a reveal-block">
-        <div class="memory-label">SCENE 03A</div>
+        <div class="memory-label">ADEGAN 03A</div>
         <div class="memory-layout">
           <div class="memory-photo-wrap">
             <div class="cinematic-frame memory-frame">
-              <img src="assets/img/photo8.jpg" alt="Memory A" loading="lazy" onerror="this.onerror=null; this.parentNode.classList.add('img-missing')" />
-              <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+              <img src="assets/img/photo8.jpg" alt="Kenangan A" loading="lazy" onerror="this.onerror=null; this.parentNode.classList.add('img-missing')" />
+              <div class="frame-missing-text" aria-hidden="true">FRAME TIDAK DITEMUKAN</div>
             </div>
           </div>
           <div class="memory-text">
-            <h3 class="memory-title">The Day I Remember Most</h3>
-            <p class="narrative">There are days that feel like years. And then there are the ones that last forever somehow—not because anything remarkable happened, but because something about the light, or the way you were there, pressed itself into me like a photograph developing slowly in a dark room.</p>
-            <p class="narrative">I keep that day somewhere that doesn't have a name. I return to it sometimes when the world is too loud or the night is too long. I don't think I've ever told you that. I probably should have.</p>
+            <h3 class="memory-title">Hari Yang Paling Kuingat</h3>
+            <p class="narrative">Ada hari-hari yang terasa seperti bertahun-tahun. Dan kemudian ada hari-hari yang entah bagaimana terasa berlangsung selamanya—bukan karena sesuatu yang luar biasa terjadi, tetapi karena sesuatu tentang cahaya, atau caramu berada di sana, melekat di dalam diriku seperti foto yang perlahan muncul di dalam ruang gelap.</p>
+            <p class="narrative">Aku menyimpan hari itu di suatu tempat yang tidak memiliki nama. Sesekali aku kembali ke sana ketika dunia terasa terlalu bising atau malam terasa terlalu panjang. Kurasa aku belum pernah mengatakan itu kepadamu. Seharusnya sudah.</p>
           </div>
         </div>
       </article>
 
-      <!-- Memory B -->
+      <!-- Kenangan B -->
       <article class="memory-block memory-b reveal-block">
-        <div class="memory-label">SCENE 03B</div>
+        <div class="memory-label">ADEGAN 03B</div>
         <div class="memory-layout memory-layout-reverse">
           <div class="memory-photo-wrap">
             <div class="cinematic-frame memory-frame">
-              <img src="assets/img/photo9.jpg" alt="Memory B" loading="lazy" onerror="this.onerror=null; this.parentNode.classList.add('img-missing')" />
-              <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+              <img src="assets/img/photo9.jpg" alt="Kenangan B" loading="lazy" onerror="this.onerror=null; this.parentNode.classList.add('img-missing')" />
+              <div class="frame-missing-text" aria-hidden="true">FRAME TIDAK DITEMUKAN</div>
             </div>
           </div>
           <div class="memory-text">
-            <h3 class="memory-title">The One I Almost Missed</h3>
-            <p class="narrative">I almost didn't pay attention. I was somewhere else in my head—the way I sometimes am—when I looked up and there you were. Just being you. Not doing anything in particular. Just existing in a way that somehow made everything else stop mattering.</p>
-            <p class="narrative">I don't know what I would have missed if I'd looked away. I'm glad I didn't. I'm glad for every small second I chose to actually be there with you instead of wherever else my mind was trying to go.</p>
+            <h3 class="memory-title">Yang Hampir Terlewatkan</h3>
+            <p class="narrative">Aku hampir tidak memperhatikannya. Pikiranku sedang berada di tempat lain—seperti yang terkadang terjadi—ketika aku mengangkat kepala dan melihatmu di sana. Hanya menjadi dirimu sendiri. Tidak sedang melakukan sesuatu yang istimewa. Hanya ada, dengan cara yang entah bagaimana membuat semua hal lain berhenti menjadi penting.</p>
+            <p class="narrative">Aku tidak tahu apa yang akan kulewatkan jika saat itu aku menoleh ke arah lain. Aku bersyukur tidak melakukannya. Aku bersyukur untuk setiap detik kecil ketika aku memilih untuk benar-benar berada di sana bersamamu, alih-alih berada di tempat lain yang coba dituju pikiranku.</p>
           </div>
         </div>
       </article>
 
-      <!-- Memory C -->
+      <!-- Kenangan C -->
       <article class="memory-block memory-c reveal-block">
-        <div class="memory-label">SCENE 03C</div>
+        <div class="memory-label">ADEGAN 03C</div>
         <div class="memory-layout">
           <div class="memory-photo-wrap">
             <div class="cinematic-frame memory-frame">
-              <img src="assets/img/photo10.jpg" alt="Memory C" loading="lazy" onerror="this.onerror=null; this.parentNode.classList.add('img-missing')" />
-              <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+              <img src="assets/img/photo10.jpg" alt="Kenangan C" loading="lazy" onerror="this.onerror=null; this.parentNode.classList.add('img-missing')" />
+              <div class="frame-missing-text" aria-hidden="true">FRAME TIDAK DITEMUKAN</div>
             </div>
           </div>
           <div class="memory-text">
-            <h3 class="memory-title">The Late Night That Became Morning</h3>
-            <p class="narrative">Some conversations have no ending. They just slowly dissolve into silence, and then into sleep, and then into a kind of closeness that doesn't need words anymore. That's what I think of when I think of us at our best: the way time becomes elastic, unhurried, generous.</p>
-            <p class="narrative">I've had long nights before. But not like those. Not with the feeling that the night itself was on our side, giving us more minutes than it gives anyone else.</p>
+            <h3 class="memory-title">Malam Larut Yang Menjadi Pagi</h3>
+            <p class="narrative">Beberapa percakapan tidak memiliki akhir. Mereka hanya perlahan melebur menjadi keheningan, lalu menjadi tidur, lalu menjadi sebuah kedekatan yang tidak lagi membutuhkan kata-kata. Itulah yang kupikirkan ketika mengingat kita dalam keadaan terbaik: bagaimana waktu menjadi elastis, tanpa tergesa, murah hati.</p>
+            <p class="narrative">Aku pernah melewati malam-malam yang panjang sebelumnya. Tetapi tidak seperti malam-malam itu. Tidak dengan perasaan bahwa malam itu sendiri berada di pihak kita, memberi kita lebih banyak menit daripada yang diberikan kepada orang lain.</p>
           </div>
         </div>
       </article>
 
       <div class="scene-footer">
-        <span class="scene-counter">SCENE 03 / 06</span>
-        <a href="#scene04" class="continue-arrow">CONTINUE ↓</a>
+        <span class="scene-counter">ADEGAN 03 / 06</span>
+        <a href="#scene04" class="continue-arrow">LANJUT ↓</a>
       </div>
     </section>
 
     <!-- ─────────────────────────────────────────
-         SCENE 04 — WHEN THE WORLD FEELS HEAVY
+         ADEGAN 04 — SAAT DUNIA TERASA BERAT
     ───────────────────────────────────────── -->
-    <section id="scene04" class="scene scene-dark scene04-bg" data-scene="04" data-scene-title="WHEN THE WORLD FEELS HEAVY" role="region" aria-label="Scene 04: When the World Feels Heavy">
+    <section id="scene04" class="scene scene-dark scene04-bg" data-scene="04" data-scene-title="SAAT DUNIA TERASA BERAT" role="region" aria-label="Adegan 04: Saat Dunia Terasa Berat">
       <div class="scene-label-top">
-        <span class="scene-number">SCENE 04</span>
+        <span class="scene-number">ADEGAN 04</span>
         <span class="scene-sep-dot">·</span>
-        <span class="scene-name">WHEN THE WORLD FEELS HEAVY</span>
+        <span class="scene-name">SAAT DUNIA TERASA BERAT</span>
       </div>
 
       <div class="scene04-intro reveal-block">
-        <h2 class="scene-title-large">When The World<br /><em>Feels Heavy</em></h2>
-        <p class="scene-subtitle">"If today is one of those days, choose a scene."</p>
+        <h2 class="scene-title-large">Saat Dunia<br /><em>Terasa Berat</em></h2>
+        <p class="scene-subtitle">"Jika hari ini adalah salah satu hari itu, pilih sebuah adegan."</p>
       </div>
 
-      <!-- Mood Selector -->
-      <div class="mood-selector" id="moodSelector" role="group" aria-label="Choose your mood">
-        <button class="mood-btn" data-mood="tired" aria-pressed="false">I'M TIRED</button>
-        <button class="mood-btn" data-mood="sad" aria-pressed="false">I'M SAD</button>
-        <button class="mood-btn" data-mood="overthinking" aria-pressed="false">I'M OVERTHINKING</button>
-        <button class="mood-btn" data-mood="courage" aria-pressed="false">I NEED COURAGE</button>
-        <button class="mood-btn" data-mood="missing" aria-pressed="false">I MISS YOU</button>
-        <button class="mood-btn" data-mood="general" aria-pressed="false">JUST WANT TO READ</button>
-        <button class="mood-btn mood-btn-surprise" data-mood="surprise" aria-pressed="false">✦ SURPRISE ME</button>
+      <!-- Pemilih Suasana Hati -->
+      <div class="mood-selector" id="moodSelector" role="group" aria-label="Pilih suasana hatimu">
+        <button class="mood-btn" data-mood="tired" aria-pressed="false">AKU LELAH</button>
+        <button class="mood-btn" data-mood="sad" aria-pressed="false">AKU SEDIH</button>
+        <button class="mood-btn" data-mood="overthinking" aria-pressed="false">AKU TERLALU BANYAK BERPIKIR</button>
+        <button class="mood-btn" data-mood="courage" aria-pressed="false">AKU BUTUH KEBERANIAN</button>
+        <button class="mood-btn" data-mood="missing" aria-pressed="false">AKU MERINDUKANMU</button>
+        <button class="mood-btn" data-mood="general" aria-pressed="false">AKU HANYA INGIN MEMBACA</button>
+        <button class="mood-btn mood-btn-surprise" data-mood="surprise" aria-pressed="false">✦ KEJUT AKU</button>
       </div>
 
-      <!-- Message Display -->
+      <!-- Tampilan Pesan -->
       <div class="message-display" id="messageDisplay" aria-live="polite" aria-hidden="true">
         <div class="message-now-playing">
           <span class="dot-anim"></span>
-          SCENE PLAYING...
+          ADEGAN SEDANG DIPUTAR...
         </div>
         <div class="message-text-wrap" id="messageTextWrap">
           <p class="message-body" id="messageBody"></p>
         </div>
-        <button class="message-next-btn" id="messageNextBtn">NEXT MESSAGE</button>
+        <button class="message-next-btn" id="messageNextBtn">PESAN BERIKUTNYA</button>
       </div>
 
       <div class="scene-footer">
-        <span class="scene-counter">SCENE 04 / 06</span>
-        <a href="#scene05" class="continue-arrow">CONTINUE ↓</a>
+        <span class="scene-counter">ADEGAN 04 / 06</span>
+        <a href="#scene05" class="continue-arrow">LANJUT ↓</a>
       </div>
     </section>
 
     <!-- ─────────────────────────────────────────
-         SCENE 05 — THINGS I NEVER SAY ENOUGH
+         ADEGAN 05 — HAL-HAL YANG JARANG KUKATAKAN
     ───────────────────────────────────────── -->
-    <section id="scene05" class="scene scene-typography" data-scene="05" data-scene-title="THINGS I NEVER SAY ENOUGH" role="region" aria-label="Scene 05: Things I Never Say Enough">
+    <section id="scene05" class="scene scene-typography" data-scene="05" data-scene-title="HAL-HAL YANG JARANG KUKATAKAN" role="region" aria-label="Adegan 05: Hal-Hal yang Jarang Kukatakan">
       <div class="scene-label-top">
-        <span class="scene-number">SCENE 05</span>
+        <span class="scene-number">ADEGAN 05</span>
         <span class="scene-sep-dot">·</span>
-        <span class="scene-name">THINGS I NEVER SAY ENOUGH</span>
+        <span class="scene-name">HAL-HAL YANG JARANG KUKATAKAN</span>
       </div>
 
-      <!-- Sequential Typography Reveal -->
+      <!-- Pengungkapan Tipografi Berurutan -->
       <div class="typo-sequence" id="typoSequence" aria-live="polite">
-        <div class="typo-word" data-index="0" aria-hidden="true">"THANK YOU."</div>
-        <div class="typo-word" data-index="1" aria-hidden="true">"FOR STAYING."</div>
-        <div class="typo-word" data-index="2" aria-hidden="true">"FOR CHOOSING THIS."</div>
-        <div class="typo-word" data-index="3" aria-hidden="true">"FOR EXISTING."</div>
-        <div class="typo-word" data-index="4" aria-hidden="true">"FOR BEING YOU."</div>
+        <div class="typo-word" data-index="0" aria-hidden="true">"TERIMA KASIH."</div>
+        <div class="typo-word" data-index="1" aria-hidden="true">"KARENA TETAP BERTAHAN."</div>
+        <div class="typo-word" data-index="2" aria-hidden="true">"KARENA MEMILIH INI."</div>
+        <div class="typo-word" data-index="3" aria-hidden="true">"KARENA TELAH ADA."</div>
+        <div class="typo-word" data-index="4" aria-hidden="true">"KARENA MENJADI DIRIMU."</div>
       </div>
 
-      <!-- Personal Letter -->
+      <!-- Surat Pribadi -->
       <div class="scene05-letter reveal-block" id="scene05Letter">
-        <div class="letter-decoration" aria-hidden="true">— a letter —</div>
+        <div class="letter-decoration" aria-hidden="true">— sebuah surat —</div>
         <div class="letter-body">
-          <p class="narrative">I don't say this as often as I should, and I think you probably know that, but I want to say it here, in writing, so it exists somewhere outside of me:</p>
-          <p class="narrative">You are genuinely good. Not in the polished, effortful way that some people perform goodness. In the real way. The way that shows up without being asked, that notices the small things, that doesn't make a scene about kindness.</p>
-          <p class="narrative">You have made me better. Not by telling me to be better—but just by being someone I wanted to show up for. That's the kind of influence that changes people quietly, at the root level, without announcement.</p>
-          <p class="narrative">I notice more than I say. I appreciate more than I express. And I know that's something I should work on. But I want you to know—even when I'm quiet, even when I get absorbed in whatever is happening in my own head—I see you. I feel it. I'm grateful for it.</p>
-          <p class="narrative">Thank you for being patient with me. For being curious about me. For all the times you stayed when it would have been easier to go.</p>
-          <p class="narrative">I'm glad you stayed.</p>
+          <p class="narrative">Aku tidak mengatakannya sesering yang seharusnya, dan kurasa kamu mungkin tahu itu, tetapi aku ingin mengatakannya di sini, dalam tulisan, agar ia ada di suatu tempat di luar diriku:</p>
+          <p class="narrative">Kamu benar-benar baik. Bukan dalam cara yang sempurna dan dibuat-buat seperti sebagian orang yang menunjukkan kebaikan. Tetapi dalam cara yang nyata. Cara yang hadir tanpa diminta, yang memperhatikan hal-hal kecil, yang tidak membuat pertunjukan dari sebuah kebaikan.</p>
+          <p class="narrative">Kamu telah membuatku menjadi lebih baik. Bukan dengan menyuruhku menjadi lebih baik—tetapi hanya dengan menjadi seseorang yang membuatku ingin memberikan versi terbaik dari diriku. Itulah jenis pengaruh yang mengubah seseorang secara perlahan, hingga ke akarnya, tanpa perlu diumumkan.</p>
+          <p class="narrative">Aku memperhatikan lebih banyak daripada yang kukatakan. Aku menghargai lebih banyak daripada yang kuungkapkan. Dan aku tahu itu adalah sesuatu yang harus kuperbaiki. Tetapi aku ingin kamu tahu—bahkan ketika aku diam, bahkan ketika aku tenggelam dalam apa pun yang sedang terjadi di dalam kepalaku sendiri—aku melihatmu. Aku merasakannya. Aku bersyukur untuk semua itu.</p>
+          <p class="narrative">Terima kasih karena telah bersabar denganku. Karena ingin mengenalku lebih dalam. Untuk semua saat ketika kamu tetap tinggal meskipun pergi mungkin akan terasa lebih mudah.</p>
+          <p class="narrative">Aku senang kamu tetap tinggal.</p>
         </div>
       </div>
 
       <div class="scene-footer">
-        <span class="scene-counter">SCENE 05 / 06</span>
-        <a href="#scene06" class="continue-arrow">CONTINUE ↓</a>
+        <span class="scene-counter">ADEGAN 05 / 06</span>
+        <a href="#scene06" class="continue-arrow">LANJUT ↓</a>
       </div>
     </section>
 
     <!-- ─────────────────────────────────────────
-         SCENE 06 — YOUR BIRTHDAY
+         ADEGAN 06 — ULANG TAHUNMU
     ───────────────────────────────────────── -->
-    <section id="scene06" class="scene scene-birthday" data-scene="06" data-scene-title="YOUR BIRTHDAY" role="region" aria-label="Scene 06: Your Birthday">
+    <section id="scene06" class="scene scene-birthday" data-scene="06" data-scene-title="ULANG TAHUNMU" role="region" aria-label="Adegan 06: Ulang Tahunmu">
       <div class="scene-label-top">
-        <span class="scene-number">SCENE 06</span>
+        <span class="scene-number">ADEGAN 06</span>
         <span class="scene-sep-dot">·</span>
-        <span class="scene-name">YOUR BIRTHDAY</span>
+        <span class="scene-name">ULANG TAHUNMU</span>
       </div>
 
       <div class="birthday-climax">
         <div class="birthday-date-label reveal-text" id="birthdayLabel"></div>
-        <h2 class="birthday-title reveal-text">Happy Birthday,<br /><em id="birthdayName"></em></h2>
+        <h2 class="birthday-title reveal-text">Selamat Ulang Tahun,<br /><em id="birthdayName"></em></h2>
 
         <div class="birthday-photo-wrap reveal-block">
           <div class="cinematic-frame birthday-frame">
-            <img src="assets/img/photo11.jpg" alt="Birthday portrait" loading="lazy" onerror="this.onerror=null; this.parentNode.classList.add('img-missing')" />
-            <div class="frame-missing-text" aria-hidden="true">FRAME NOT FOUND</div>
+            <img src="assets/img/photo11.jpg" alt="Potret ulang tahun" loading="lazy" onerror="this.onerror=null; this.parentNode.classList.add('img-missing')" />
+            <div class="frame-missing-text" aria-hidden="true">FRAME TIDAK DITEMUKAN</div>
             <div class="birthday-glow" aria-hidden="true"></div>
           </div>
         </div>
 
         <div class="birthday-letter reveal-block">
-          <p class="narrative narrative-lead">Today is yours. Entirely, completely, undeniably yours.</p>
-          <p class="narrative">I've been thinking about what I want to say to you today, and I keep running into the same wall: the things that matter most are the hardest to put into language. Not because they're complicated—but because they're so large and so quiet at the same time, like something you can only ever point toward and hope the other person sees what you're pointing at.</p>
-          <p class="narrative">So here's what I'll say: I am lucky. Not in the abstract, sentimental way people say that. In the specific, daily, ordinary way. Lucky that you exist. Lucky that our lives managed to intersect at whatever strange angle they did. Lucky that I get to know you—the real version of you, not the public-facing one.</p>
-          <p class="narrative">I hope today is soft. I hope it gives you what you need, whether that's a celebration or a quiet room or something in between. I hope the year ahead holds something you didn't expect—something good, surprising, yours.</p>
-          <p class="narrative">You deserve so much of the world. I know I say that, and I know everyone says that to people they love, but I mean it with the kind of specificity that doesn't translate well into sentences. You deserve to be known. You deserve to take up space. You deserve to be chosen, again and again, every ordinary day.</p>
-          <p class="narrative">I choose you. On your birthday and every other day. With all the imperfect, genuine care I have.</p>
-          <p class="narrative narrative-sign">— with everything,<br /><em id="birthdayFromName"></em></p>
+          <p class="narrative narrative-lead">Hari ini adalah milikmu. Sepenuhnya, seluruhnya, tanpa terkecuali milikmu.</p>
+          <p class="narrative">Aku sudah memikirkan apa yang ingin kukatakan kepadamu hari ini, dan aku terus menemukan dinding yang sama: hal-hal yang paling berarti justru paling sulit dituangkan ke dalam kata-kata. Bukan karena mereka rumit—tetapi karena mereka begitu besar dan begitu sunyi pada saat yang sama, seperti sesuatu yang hanya bisa kamu tunjuk dan berharap orang lain dapat melihat apa yang sedang kamu tunjuk.</p>
+          <p class="narrative">Jadi inilah yang akan kukatakan: aku beruntung. Bukan dalam arti abstrak dan sentimental seperti yang sering orang katakan. Tetapi dalam arti yang spesifik, sehari-hari, dan sederhana. Beruntung karena kamu ada. Beruntung karena hidup kita entah bagaimana berhasil bersinggungan pada sudut yang aneh itu. Beruntung karena aku bisa mengenalmu—versi dirimu yang sebenarnya, bukan versi yang kamu tunjukkan kepada dunia.</p>
+          <p class="narrative">Aku berharap hari ini terasa lembut. Aku berharap hari ini memberikan apa yang kamu butuhkan, entah itu sebuah perayaan, sebuah ruangan yang tenang, atau sesuatu di antaranya. Aku berharap tahun yang akan datang membawa sesuatu yang tidak kamu duga—sesuatu yang baik, mengejutkan, dan benar-benar menjadi milikmu.</p>
+          <p class="narrative">Kamu pantas mendapatkan begitu banyak hal baik dari dunia. Aku tahu aku mengatakan itu, dan aku tahu semua orang mengatakan itu kepada orang yang mereka cintai, tetapi aku mengatakannya dengan ketulusan yang begitu spesifik hingga sulit diterjemahkan menjadi kalimat. Kamu pantas untuk dikenal. Kamu pantas untuk memiliki ruang. Kamu pantas untuk dipilih, lagi dan lagi, setiap hari yang biasa.</p>
+          <p class="narrative">Aku memilihmu. Di hari ulang tahunmu dan setiap hari lainnya. Dengan segala kepedulian tulus dan tidak sempurna yang aku punya.</p>
+          <p class="narrative narrative-sign">— dengan segenap yang kupunya,<br /><em id="birthdayFromName"></em></p>
         </div>
       </div>
 
       <div class="scene-footer">
-        <span class="scene-counter">SCENE 06 / 06</span>
-        <a href="#finalScene" class="continue-arrow">CONTINUE ↓</a>
+        <span class="scene-counter">ADEGAN 06 / 06</span>
+        <a href="#finalScene" class="continue-arrow">LANJUT ↓</a>
       </div>
     </section>
 
     <!-- ─────────────────────────────────────────
-         FINAL SCENE
+         ADEGAN TERAKHIR
     ───────────────────────────────────────── -->
-    <section id="finalScene" class="scene scene-final" data-scene="final" role="region" aria-label="Final Scene">
+    <section id="finalScene" class="scene scene-final" data-scene="final" role="region" aria-label="Adegan Terakhir">
       <div class="scene-label-top">
-        <span class="scene-number">FINAL SCENE</span>
+        <span class="scene-number">ADEGAN TERAKHIR</span>
       </div>
 
       <div class="final-sequence" id="finalSequence">
-        <p class="final-line" data-delay="0">"Every movie eventually ends."</p>
-        <p class="final-line" data-delay="2500">"But I don't think this is the end."</p>
-        <p class="final-line" data-delay="5000">"Just another scene."</p>
-        <h2 class="final-to-be" data-delay="7500">TO BE CONTINUED...</h2>
+        <p class="final-line" data-delay="0">"Setiap film pada akhirnya akan selesai."</p>
+        <p class="final-line" data-delay="2500">"Tapi aku tidak berpikir ini adalah akhirnya."</p>
+        <p class="final-line" data-delay="5000">"Hanya sebuah adegan lainnya."</p>
+        <h2 class="final-to-be" data-delay="7500">BERSAMBUNG...</h2>
       </div>
 
-      <!-- FILM CREDITS -->
+      <!-- KREDIT FILM -->
       <div class="credits-wrap" id="creditsWrap" aria-hidden="true">
         <div class="credits-scroll" id="creditsScroll">
           <div class="credits-block">
-            <p class="credits-role">A FILM BY</p>
+            <p class="credits-role">SEBUAH FILM OLEH</p>
             <p class="credits-name" id="creditsDirectorFinal"></p>
           </div>
+
           <div class="credits-rule"></div>
+
           <div class="credits-block">
-            <p class="credits-role">FOR</p>
+            <p class="credits-role">UNTUK</p>
             <p class="credits-name" id="creditsStarFinal"></p>
           </div>
+
           <div class="credits-rule"></div>
+
           <div class="credits-block">
-            <p class="credits-role">SPECIAL THANKS</p>
-            <p class="credits-name">To every memory we made</p>
+            <p class="credits-role">UCAPAN TERIMA KASIH KHUSUS</p>
+            <p class="credits-name">Untuk setiap kenangan yang kita buat</p>
           </div>
+
           <div class="credits-block">
-            <p class="credits-role">CAMERA</p>
-            <p class="credits-name">Every moment I wish I could keep</p>
+            <p class="credits-role">KAMERA</p>
+            <p class="credits-name">Setiap momen yang ingin kusimpan</p>
           </div>
+
           <div class="credits-block">
-            <p class="credits-role">STORY</p>
-            <p class="credits-name">Us</p>
+            <p class="credits-role">CERITA</p>
+            <p class="credits-name">Kita</p>
           </div>
+
           <div class="credits-rule"></div>
+
           <div class="credits-the-end">
-            <p class="credits-end-title">THE END</p>
-            <p class="credits-end-sub">for now.</p>
+            <p class="credits-end-title">TAMAT</p>
+            <p class="credits-end-sub">untuk sekarang.</p>
           </div>
         </div>
       </div>
 
       <div class="final-actions" id="finalActions">
-        <button class="replay-btn" id="replayBtn" aria-label="Watch again from the beginning">
-          ↻ WATCH AGAIN
+        <button class="replay-btn" id="replayBtn" aria-label="Tonton lagi dari awal">
+          ↻ TONTON LAGI
         </button>
       </div>
     </section>
 
   </main>
 
-  <!-- Audio element -->
+  <!-- Elemen audio -->
   <audio id="bgMusic" loop preload="none">
     <source src="assets/audio/music.mp3" type="audio/mpeg" />
   </audio>
